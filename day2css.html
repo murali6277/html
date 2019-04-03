@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function move(){
+            document.getElementById("div1").className ="mystyle";
+        }
+    </script>
+   <style>
+       @keyframes myanimation{
+           0%{ background-color: chartreuse;left:0px;top:0px;}
+           25%{ background-color: darkcyan; left:300px;top:0px;}
+           50%{ background-color: orange ;left:300px;top:300px;}
+           75%{ background-color: red;left:0px;top:300px; }
+           100%{ background-color: plum;left:0px;top:0px; }
+       }
+       div{ 
+           border:2px solid red;
+           background-color: aqua;
+           width: 100px;
+           height: 100px;
+           transition: background color 3s;
+           transition: width 3s;
+           transition: height 3s;
+           position: relative;
+         }
+         .mystyle{
+            animation: myanimation 5s;
+           animation-iteration-count: infinite;
+         }
+
+      
+   </style>
+
+</head>
+<body>
+   <div id="div1"></div>
+   <br>
+   <br>
+   <button onclick="move()">move</button>
+
+
+</body>
+</html>

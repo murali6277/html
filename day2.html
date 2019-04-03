@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow" align="center">
+    <table style="background-color: lawngreen" align="center" >
+
+    
+    <h1>user registration form</h1>
+    <form action="user.html" method="POST">
+        <tr> 
+            <th>first name</th>
+            <td>
+                <input type="text" id="fname" name="fname" required pattern="[A-Z][A-Za-z\s]{2,}" title="fill out in required format">
+            </td>
+        </tr>
+        <tr>
+            <th>last name</th>
+            <td>
+                <input type="text" id="lname" name="lname"/ required>
+            </td>
+        </tr>
+        <tr>
+            <th>password</th>
+            <td>
+               <input type="password" id="pwd" name="pwd" maxlength="5"/>
+            </td>
+        </tr>
+        <tr>
+            <th>mobile number</th>
+            <td>
+                <input type="text" id="mob" name="mob" pattern="[6-9][0-9]{9}" title="mob no. should be 10 digits">
+            </td>
+        </tr>
+        <tr>
+            <th>gender</th>
+            <td>
+                <input type="radio" name="gender" value="male"/>male
+                <input type="radio" name="gender" value="female"/>female
+            </td>
+        </tr>
+         <tr>
+                <th>skills</th>
+                <td>
+                    <input type="checkbox" name="skills"/>java
+                    <input type="checkbox" name="skills"/>css
+                    <input type="checkbox" name="skills"/>c++
+                    <input type="checkbox" name="skills"/>js
+                </td>
+        </tr>
+        <tr>
+                <th>city</th>
+                <td>
+                    <select name="city" multiple size="2"> 
+                    <option>mumbai</option>
+                    <option selected>hyd </option>
+                    <option>delhi</option>
+                    <option>chennai</option>
+                </select>
+                </td>
+        </tr>
+        <tr>
+            <th>email</th>
+            <td>
+                <input type="text" id="email" name="email" pattern="[a-z 0-9 _ \.]+@[a-z 0-9]+\.com">
+            </td>
+        </tr>
+        <tr>
+            <th>comments</th>
+            <td>
+            <textarea name="comment" rows="5" cols="20"></textarea>
+        </td>
+        </tr>
+        <tr>
+            <th>resume</th>
+            <td>
+                <input type="file" name="resume">            
+            </td>
+        </tr>
+        <table>
+        <input type="submit" value="register/">
+        <input type="reset" value="clear/">
+        
+
+    </form>
+    
+    
+</body>
+</html>
