@@ -1,0 +1,11 @@
+
+img[width]{
+    border: 8px solid greenyellow
+}
+img[title="title1"]{
+    border: 5px solid red;
+    
+}
+img[title|=title]{
+    border: 7px solid blueviolet
+}
