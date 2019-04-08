@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function order() {
+            var a1 = document.getElementById("a").value;
+            var a2 = document.getElementById("b").value;
+            var a3 = document.getElementById("c").value;
+            var a4 = document.getElementById("d").value;
+            if (a1 == "" && a2 == "" && a3 == "" && a4 == "") {
+                mywin = window.open("", "mmk", "width=100, height=100");
+                mywin.document.write("no item selected");
+            }
+            else {
+                win = window.open("", "mk", "width=400,height=300");
+                win.document.write("<table border=1>");
+                win.document.write("<h1>Invoice</h1>");
+                win.document.write("<tr>");
+                      win.document.write("<th>Product</th>");
+                      win.document.write("<th>quantity</th>");
+                      win.document.write("<th>Price</th>");
+                      win.document.write("<th>total</th>");
+                win.document.write("</tr>");
+                if(a1>0){
+                win.document.write("<tr>");
+                     win.document.write("<td>Barbie Doll</td>");
+                     win.document.write("<td>"+a1+"</td>")
+                     win.document.write("<td>20</td>")
+                     win.document.write("<td>"+a1*20+"</td>");
+               win.document.write("</tr>"); }
+               if(a2>0){
+                win.document.write("<tr>");
+                     win.document.write("<td>calculator</td>");
+                     win.document.write("<td>"+a2+"</td>")
+                     win.document.write("<td>30</td>")
+                     win.document.write("<td>"+a2*30+"</td>");
+               win.document.write("</tr>");}
+               if(a3>0){
+                win.document.write("<tr>");
+                     win.document.write("<td>mobile</td>");
+                     win.document.write("<td>"+a3+"</td>")
+                     win.document.write("<td>40</td>")
+                     win.document.write("<td>"+a3*40+"</td>");
+               win.document.write("</tr>");}
+               if(a4>0){
+                win.document.write("<tr>");
+                     win.document.write("<td>dvd</td>");
+                     win.document.write("<td>"+a4+"</td>")
+                     win.document.write("<td>40</td>")
+                     win.document.write("<td>"+a4*40+"</td>");
+               win.document.write("</tr>");}
+
+
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body bgcolor="skySblue">
+    <h1 style="font-size: 50px">Products</h1>
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>price</th>
+            <th>qty</th>
+        </tr>
+        <tr>
+            <td>barbieDoll</td>
+            <td>Beautiful</td>
+            <td>20</td>
+            <td>
+                <input type="text" id="a">
+            </td>
+        </tr>
+        <tr>
+            <td>calculator</td>
+            <td>calculator with latest features</td>
+            <td>30</td>
+            <td>
+                <input type="text" id="b">
+            </td>
+        </tr>
+        <tr>
+            <td>Mobilephone</td>
+            <td>camera,javagames,Gprs</td>
+            <td>40</td>
+            <td>
+                <input type="text" id="c">
+            </td>
+        </tr>
+        <tr>
+            <td>LGDvD</td>
+            <td>5disc changer</td>
+            <td>50</td>
+            <td>
+                <input type="text" id="d">
+            </td>
+        </tr>
+    </table>
+    <input type="button" onclick="order()" value="order">
+</body>
+
+</html>
