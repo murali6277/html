@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loan</title>
+    <script>
+        function check(){
+            var m;
+            m=document.getElementById("amount").value;
+            if(m>1500000){
+                document.getElementById("error").innerHTML="Amount of Loan should not be more than 15 lakhs";
+            }
+            else{
+                document.getElementById("error").innerHTML="";
+            }
+        }
+        function period1(){
+            var y;
+            y=document.getElementById("period").value;
+            if(y>=7 && y<=15){
+                document.getElementById("year").innerHTML="";
+            }
+            else{
+                document.getElementById("year").innerHTML="Repayment period should be between 7 yrs to 15 yrs";
+            }
+        }
+        function compute(){
+            var a=document.getElementById("amount").value;
+            var b=document.getElementById("pcnt").value;
+            var c=document.getElementById("period").value;
+            var result;
+            result=a/(c*12);
+            document.getElementById("mp").value=result;
+            result=a/(b*100);
+            document.getElementById("ti").value=result;
+            result=((a/(c*12))+(a/(b*100)));
+            document.getElementById("tp").value=result;
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <table>
+            <h1><b>Enter Loan information</h1><b></h1>
+                <tr>
+                    <td>1) Amount of the loan(any currency):</td>
+                    <td><input type="text" id="amount" name="amount" onblur="check()"><span style=" color: red "
+                            id="error"></span></td>
+                </tr>
+                <tr>
+                    <td>2)Annual percentage rate of interest:</td>
+                    <td><input type="text" id="pcnt" name="pcnt"></td>
+                </tr>
+                <tr>
+                    <td>3) Replacement period in years:</td>
+                    <td><input type="text" id="period" name="period" onblur="period1()"><span style=" color: red "
+                            id="year"></span></td>
+                </tr>
+        </table>
+        <input type="button" onclick="compute()" value="compute">
+        <table>
+            <h1><b>Payment information</b></h1>
+            <tr>
+                <td>4)Your monthly payment will be</td>
+                <td><input type="text" id="mp" readonly></td> 
+            </tr>
+            <tr>
+                <td>5) Your total payment will be:</td>
+                <td><input type="number" id="tp" readonly/></td>
+        </tr>
+        <tr>
+            <td>6) Your total interest payment will be:</td>
+            <td><input type="number" id="ti" readonly/></td>
+        </tr> 
+            </table>
+         </form> 
+        </body> 
+        </html>jj
